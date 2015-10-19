@@ -11,9 +11,10 @@ import UIKit
 class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var tutorial: UIScrollView!
-  
     
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var button: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         tutorial.contentSize=CGSize(width: 1280, height: 568)
         
         tutorial.delegate = self
+        
+        // Optionally initialize the property to a desired starting value
+        self.button.alpha = 0
 
 }
     func scrollViewDidEndDecelerating(tutorial: UIScrollView) {
@@ -32,6 +36,15 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage=page
         
         // Do any additional setup after loading the view.
+        if page==3 {
+            pageControl.hidden=true
+            
+ 
+            UIView.animateWithDuration(2.0, animations: {
+                // This causes first view to fade in and second view to fade out
+                self.button.alpha = 1
+            })
+        }
     }
     
     func scrollViewDidScroll(tutorial: UIScrollView) {
