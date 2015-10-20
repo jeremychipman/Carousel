@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
                 
             }
             // otherwise
-        } else if email.text != "jc" || password.text != "pass"  {
+        } else if email.text != "jc@me.com" || password.text != "pass"  {
             self.activityIndicator.startAnimating()
                 // Delay for 2 seconds, then run the code between the braces.
                 delay(2){
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
                         // add the cancel action to the alertController
                     }
                 }
-            }else if self.email.text == "jc" && self.password.text == "pass" {
+            }else if self.email.text == "jc@me.com" && self.password.text == "pass" {
                 self.activityIndicator.startAnimating()
                 // Delay for 2 seconds, then run the code between the braces.
                 
