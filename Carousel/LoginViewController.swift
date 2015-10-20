@@ -76,9 +76,10 @@ class LoginViewController: UIViewController {
             }
             // otherwise
         } else if email.text != "jc" || password.text != "pass"  {
-                
+            self.activityIndicator.startAnimating()
                 // Delay for 2 seconds, then run the code between the braces.
-                delay(2) {
+                delay(2){
+                    self.activityIndicator.stopAnimating()
                     self.presentViewController(self.badMatchAlertController, animated: true){
                         
                         // optional code for what happens after the alert controller has finished presenting
@@ -90,7 +91,7 @@ class LoginViewController: UIViewController {
                     }
                 }
             }else if self.email.text == "jc" && self.password.text == "pass" {
-                
+                self.activityIndicator.startAnimating()
                 // Delay for 2 seconds, then run the code between the braces.
                 
                 delay(2) {

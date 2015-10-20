@@ -28,10 +28,6 @@
                                                 <rect key="frame" x="3" y="350" width="320" height="129"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="6E8-3D-97y">
-                                                <rect key="frame" x="238" y="381" width="37" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </activityIndicatorView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_text" id="hMr-8W-OBV">
                                                 <rect key="frame" x="8" y="63" width="320" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
@@ -55,6 +51,10 @@
                                                     <action selector="didPressSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzA-ed-CmI"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="6E8-3D-97y">
+                                                <rect key="frame" x="238" y="381" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="5" y="20" width="46" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="77v-RS-UeX" kind="modal" modalTransitionStyle="crossDissolve" id="hrU-PP-sZq"/>
+                                    <segue destination="77v-RS-UeX" kind="modal" modalTransitionStyle="crossDissolve" id="fZk-Qz-ABr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -344,6 +344,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kUs-3D-chs" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pYx-Hz-kmQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqu-b7-Toj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -383,6 +384,6 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hrU-PP-sZq"/>
+        <segue reference="fZk-Qz-ABr"/>
     </inferredMetricsTieBreakers>
 </document>
